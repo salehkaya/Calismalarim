@@ -1,28 +1,28 @@
-package _07_ForLoop;
+package teamGuru3;
 
 import java.util.Scanner;
 
-public class Q08 {
+public class palindrome {
+
 	public static void main(String[] args) {
-		// Kullanicidan bir String isteyin. Kullanicinin girdigi
-		// String'in palindrome olup olmadigini kontrol eden bir program yazin.
+		// Java'da bir sayýnýn palindrom olup olmadýðýný kontrol etmek için bir Java
+		// programý yazýn?
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Palindrome olup olmadigini kontrol etmek istediginiz cumleyi giriniz");
-		String str = scan.nextLine();
-		String tersStr = "";
-		for (int i = str.length() - 1; i >= 0; i--) {
-			tersStr += str.charAt(i);
+		System.out.println(" lutfen palindrome olup olmadigini kontrol etmek icin bir sayi giriniz");
+		String sayi = scan.nextLine();
+		String num = "";
+
+		for (int i = sayi.length() - 1; i >= 0; i--) {
+			num += sayi.charAt(i);
 
 		}
-		System.out.println(tersStr);
-		if (str.equalsIgnoreCase(tersStr)) {
-			System.out.println("Girdiginiz " + str + " Palindrome'dir");
-		} else {
-			System.out.println("Girdiginiz " + str + " Palindrome degildir");
+
+		if (num.equalsIgnoreCase(sayi)) {
+			System.out.println(sayi + " sayisi Palindrome'dur");
+		} else if (num.equalsIgnoreCase(sayi)) {
+			System.out.println(sayi + " sayisi Palindrome degildir");
 		}
 		scan.close();
-
 	}
-
 }
